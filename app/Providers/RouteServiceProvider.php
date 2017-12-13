@@ -39,7 +39,91 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapResellerRoutes();
+
+        $this->mapStockistRoutes();
+
+        $this->mapUserRoutes();
+
+        $this->mapAdminRoutes();
+
         //
+    }
+
+    /**
+     * Define the "admin" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapAdminRoutes()
+    {
+        Route::group([
+            'middleware' => ['web', 'admin', 'auth:admin'],
+            'prefix' => 'admin',
+            'as' => 'admin.',
+            'namespace' => $this->namespace,
+        ], function ($router) {
+            require base_path('routes/admin.php');
+        });
+    }
+
+    /**
+     * Define the "user" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapUserRoutes()
+    {
+        Route::group([
+            'middleware' => ['web', 'user', 'auth:user'],
+            'prefix' => 'user',
+            'as' => 'user.',
+            'namespace' => $this->namespace,
+        ], function ($router) {
+            require base_path('routes/user.php');
+        });
+    }
+
+    /**
+     * Define the "stockist" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapStockistRoutes()
+    {
+        Route::group([
+            'middleware' => ['web', 'stockist', 'auth:stockist'],
+            'prefix' => 'stockist',
+            'as' => 'stockist.',
+            'namespace' => $this->namespace,
+        ], function ($router) {
+            require base_path('routes/stockist.php');
+        });
+    }
+
+    /**
+     * Define the "reseller" routes for the application.
+     *
+     * These routes all receive session state, CSRF protection, etc.
+     *
+     * @return void
+     */
+    protected function mapResellerRoutes()
+    {
+        Route::group([
+            'middleware' => ['web', 'reseller', 'auth:reseller'],
+            'prefix' => 'reseller',
+            'as' => 'reseller.',
+            'namespace' => $this->namespace,
+        ], function ($router) {
+            require base_path('routes/reseller.php');
+        });
     }
 
     /**

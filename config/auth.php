@@ -36,6 +36,26 @@ return [
     */
 
     'guards' => [
+        'reseller' => [
+            'driver' => 'session',
+            'provider' => 'resellers',
+        ],
+
+        'stockist' => [
+            'driver' => 'session',
+            'provider' => 'stockists',
+        ],
+
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
@@ -65,6 +85,21 @@ return [
     */
 
     'providers' => [
+        'resellers' => [
+            'driver' => 'eloquent',
+            'model' => App\Reseller::class,
+        ],
+
+        'stockists' => [
+            'driver' => 'eloquent',
+            'model' => App\Stockist::class,
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ],
+
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
@@ -92,6 +127,30 @@ return [
     */
 
     'passwords' => [
+        'resellers' => [
+            'provider' => 'resellers',
+            'table' => 'reseller_password_resets',
+            'expire' => 60,
+        ],
+
+        'stockists' => [
+            'provider' => 'stockists',
+            'table' => 'stockist_password_resets',
+            'expire' => 60,
+        ],
+
+        'users' => [
+            'provider' => 'users',
+            'table' => 'user_password_resets',
+            'expire' => 60,
+        ],
+
+        'admins' => [
+            'provider' => 'admins',
+            'table' => 'admin_password_resets',
+            'expire' => 60,
+        ],
+
         'users' => [
             'provider' => 'users',
             'table' => 'password_resets',
