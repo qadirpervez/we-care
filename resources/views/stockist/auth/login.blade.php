@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bootstrap Dashboard by Bootstrapious.com</title>
+    <title>Stockist Login | We Care</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
@@ -32,7 +32,7 @@
       <div class="container">
         <div class="form-outer text-center">
           <div class="form-inner">
-            <div class="logo text-uppercase"><span>Reseller</span><strong class="text-primary">Dashboard</strong></div>
+            <div class="logo text-uppercase"><span>STOCKIST</span><strong class="text-primary">Dashboard</strong></div>
             <form id="login-form" role="form" method="POST" action="{{ url('/stockist/login') }}">
               {{ csrf_field() }}
               <div class="form-group">
