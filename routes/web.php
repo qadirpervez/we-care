@@ -45,9 +45,6 @@ Route::group(['prefix' => 'stockist'], function () {
   Route::post('/login', 'StockistAuth\LoginController@login');
   Route::post('/logout', 'StockistAuth\LoginController@logout')->name('logout');
 
-  Route::get('/register', 'StockistAuth\RegisterController@showRegistrationForm')->name('register');
-  Route::post('/register', 'StockistAuth\RegisterController@register');
-
   Route::post('/password/email', 'StockistAuth\ForgotPasswordController@sendResetLinkEmail')->name('password.request');
   Route::post('/password/reset', 'StockistAuth\ResetPasswordController@reset')->name('password.email');
   Route::get('/password/reset', 'StockistAuth\ForgotPasswordController@showLinkRequestForm')->name('password.reset');
@@ -58,9 +55,6 @@ Route::group(['prefix' => 'reseller'], function () {
   Route::get('/login', 'ResellerAuth\LoginController@showLoginForm')->name('login');
   Route::post('/login', 'ResellerAuth\LoginController@login');
   Route::post('/logout', 'ResellerAuth\LoginController@logout')->name('logout');
-
-  Route::get('/register', 'ResellerAuth\RegisterController@showRegistrationForm')->name('register');
-  Route::post('/register', 'ResellerAuth\RegisterController@register');
 
   Route::post('/password/email', 'ResellerAuth\ForgotPasswordController@sendResetLinkEmail')->name('password.request');
   Route::post('/password/reset', 'ResellerAuth\ResetPasswordController@reset')->name('password.email');

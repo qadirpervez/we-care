@@ -18,7 +18,7 @@ class RedirectIfReseller
 	public function handle($request, Closure $next, $guard = 'reseller')
 	{
 	    if (Auth::guard($guard)->check()) {
-	        return redirect('reseller/home');
+	        return redirect('reseller');
 	    }
 
 	    return $next($request);

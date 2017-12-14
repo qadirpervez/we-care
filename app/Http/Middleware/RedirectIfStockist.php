@@ -18,7 +18,7 @@ class RedirectIfStockist
 	public function handle($request, Closure $next, $guard = 'stockist')
 	{
 	    if (Auth::guard($guard)->check()) {
-	        return redirect('stockist/home');
+	        return redirect('stockist');
 	    }
 
 	    return $next($request);
