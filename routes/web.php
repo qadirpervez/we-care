@@ -13,7 +13,14 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+//404 routes
+
+Route::get('404',['as'=>'404','uses'=>'ErrorHandlerController@errorCode404']);
+Route::get('405',['as'=>'405','uses'=>'ErrorHandlerController@errorCode405']);
+
+//404 routes
 
 Route::group(['prefix' => 'admin'], function () {
   Route::get('/login', 'AdminAuth\LoginController@showLoginForm')->name('login');
