@@ -9,17 +9,25 @@
     <style>
       body{
         background-image: url({{ URL::asset('images/errors/ERROR_404.jpg') }});
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
       }
       h1{
         font-family: 'Slabo 27px', serif;
         color: #fff;
         font-weight: bold;
         text-shadow: 3px 3px 4px #000;
+        margin: 0;
+        padding: 0;
       }
       .top-height{
-        margin-top: 560px;
+        margin-top: 360px;
       }
       p{
+        margin: 0;
+        padding: 0;
         color: #fff;
         font-family: 'Open Sans', sans-serif;
         font-size: 17px;
@@ -30,8 +38,15 @@
         top: 4px;
       }
       .btn{
+        margin-top: 50px;
         border-radius: 0px;
         font-weight: bold;
+        background: #33b35a;
+        text-shadow: 1px 1px 2px #000;
+        box-shadow: 1px 1px 3px #000;
+      }
+      .btn:hover{
+        box-shadow: 2px 2px 3px #000;
       }
     </style>
   </head>
