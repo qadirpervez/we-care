@@ -28,6 +28,11 @@ class DatabaseSeeder extends Seeder
       DB::table('stockists')->insert([
         'name' => 'Qadir Pervez',
         'email' => 'qadir@stockist.com',
+        'address' => '123 Mains',
+        'city' => 'Kolkata',
+        'state' => 'West Bengal',
+        'zip' => '700039',
+        'total_business' => 0,
         'password' => bcrypt('stockist'),
         'created_at' => date('Y-m-d H:i:s'),
         'updated_at' => date('Y-m-d H:i:s'),
@@ -35,6 +40,11 @@ class DatabaseSeeder extends Seeder
       DB::table('resellers')->insert([
         'name' => 'Qadir Pervez',
         'email' => 'qadir@reseller.com',
+        'address' => '123 Mains',
+        'city' => 'Kolkata',
+        'state' => 'West Bengal',
+        'zip' => '700039',
+        'total_business' => 0,
         'password' => bcrypt('reseller'),
         'created_at' => date('Y-m-d H:i:s'),
         'updated_at' => date('Y-m-d H:i:s'),
