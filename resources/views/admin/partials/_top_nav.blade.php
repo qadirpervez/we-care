@@ -9,7 +9,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li class="">
           <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-            <img src="{{ URL::asset('images/admin/img.jpg') }}" alt="">John Doe
+            <img src="{{ URL::asset('images/admin/img.jpg') }}" alt="">{{ Auth::user()->name }}
             <span class=" fa fa-angle-down"></span>
           </a>
           <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -21,7 +21,11 @@
               </a>
             </li>
             <li><a href="javascript:;">Help</a></li>
-            <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+            <li><a href="{{ url('/admin/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+
+            <form id="logout-form" action="{{ url('/admin/logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form>
           </ul>
         </li>
 
