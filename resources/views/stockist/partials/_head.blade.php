@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="all,follow">
 <!-- Bootstrap CSS-->
-<link rel="stylesheet" href="{{ URL::asset('css/reseller/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/stockist/bootstrap.min.css') }}">
 <!-- Font Awesome CSS-->
-<link rel="stylesheet" href="{{ URL::asset('css/reseller/font-awesome.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/stockist/font-awesome.min.css') }}">
 <!-- Custom icon font-->
-<link rel="stylesheet" href="{{ URL::asset('css/reseller/fontastic.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/stockist/fontastic.css') }}">
 <!-- Google fonts - Roboto -->
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
 <!-- jQuery Circle-->
-<link rel="stylesheet" href="{{ URL::asset('css/reseller/grasp_mobile_progress_circle-1.0.0.min.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/stockist/grasp_mobile_progress_circle-1.0.0.min.css') }}">
 <!-- Custom Scrollbar-->
-<link rel="stylesheet" href="{{ URL::asset('css/reseller/jquery.mCustomScrollbar.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/stockist/jquery.mCustomScrollbar.css') }}">
 <!-- theme stylesheet-->
-<link rel="stylesheet" href="{{ URL::asset('css/reseller/style.default.css') }}" id="theme-stylesheet">
+<link rel="stylesheet" href="{{ URL::asset('css/stockist/style.default.css') }}" id="theme-stylesheet">
 <!-- Custom stylesheet - for your changes-->
-<link rel="stylesheet" href="{{ URL::asset('css/reseller/custom.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/stockist/custom.css') }}">
 <!-- Favicon-->
 <link rel="shortcut icon" href="favicon.png">
 <!-- Tweaks for older IEs--><!--[if lt IE 9]>

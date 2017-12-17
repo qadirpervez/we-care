@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    @include('reseller.partials._head')
+    @include('stockist.partials._head')
     @yield('styles')
   </head>
   <body>
     <!-- Side Navbar -->
-    @include('reseller.partials._left_menu')
+    @include('stockist.partials._left_menu')
     <div class="page home-page">
-      @include('reseller.partials._top_nav')
+      @include('stockist.partials._top_nav')
       <!-- Counts Section -->
       @yield('content')
 
-      @include('reseller.partials._footer')
+      @include('stockist.partials._footer')
     </div>
-    @include('reseller.partials._scripts')
+    @include('stockist.partials._scripts')
     @yield('scripts')
   </body>
 </html>

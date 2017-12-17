@@ -7,5 +7,5 @@ Route::get('/', function () {
 
     //dd($users);
 
-    return view('stockist.dashboard');
+    return view('stockist.dashboard.index');
 })->name('dashboard');
