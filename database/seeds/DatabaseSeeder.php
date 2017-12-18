@@ -58,5 +58,18 @@ class DatabaseSeeder extends Seeder
         'created_at' => date('Y-m-d H:i:s'),
         'updated_at' => date('Y-m-d H:i:s'),
       ]);
+      DB::table('products')->insert([
+        'product_name' => 'DIABOCARE CAPSULE',
+        'product_type' => 'CONTROLLER BLOOD SUGAR',
+        'composition' => 'EXTRACT 500MG CAPSULE',
+        'dose' => '2 CAPSULE TWO TIMES BEFORE FOOD. WITH WARM WATER',
+        'course' => 'AS PER DEPEND YOU',
+        'size' => '60 CAPSULE IN SINGLE PACK',
+        'packet' => 'HDPE BOTTLE WITH CHILD LOCK',
+        'pack_color' => 'HDPE BOTTLE (WHITE,BROWN,BLACK,RED,SILVER)',
+        'label' => 'MATT THURMAL ,GLOSSY, TRANSPARENT',
+        'price' => '250',
+        'bp' => '50',
+      ]);
     }
 }
