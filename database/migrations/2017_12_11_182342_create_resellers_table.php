@@ -15,6 +15,7 @@ class CreateResellersTable extends Migration
         Schema::create('resellers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
+            $table->string('shop_name');
             $table->string('email')->unique();
             $table->string('address');
             $table->string('city');
