@@ -40,7 +40,7 @@ class DatabaseSeeder extends Seeder
       ]);
       DB::table('resellers')->insert([
         'name' => 'Qadir Pervez',
-        'shop_name' => 'Qadir Stores'
+        'shop_name' => 'Qadir Stores',
         'email' => 'qadir@reseller.com',
         'address' => '123 Mains',
         'city' => 'Kolkata',
